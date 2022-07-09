@@ -20,7 +20,6 @@ export default function calculate(obj,buttonName)
             if(obj.next){
                 return {next: obj.next+buttonName};
 
-            };
         }
         return {next: buttonName};
     }
@@ -30,6 +29,11 @@ export default function calculate(obj,buttonName)
             total: null,
         };
     }
+    return{
+        next: buttonName,
+        total: null,
+    };
+}
     if (buttonName==='.'){
         if (obj.next){
             if(obj.next.includes('.')){
@@ -37,16 +41,7 @@ export default function calculate(obj,buttonName)
             }
             return {next: obj.next+'.'};
         }
-        if (obj.operation){
-            return {next: '0.'};
-        }
-        if (obj.total){
-            if(obj.total.includes('.')){
-                return {};
-            }
-            return {total: obj.total+'.'};
-        }
-        return {total:'0.'};
+        return {next: '0.'};
     }
 
     if (buttonName=== '='){
