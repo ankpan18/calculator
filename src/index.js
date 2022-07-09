@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+// import ReactDOM from 'react-dom/client';  // this was the error
+import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import 'github-fork-ribbon-css/gh-fork-ribbon.css';
