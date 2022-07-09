@@ -16,7 +16,7 @@ class Button extends React.Component {
     if (this.props.wide) {
       className += " wide";
     }
-    return (<div className={{className}}><button onClick={this.handleClick}>{this.props.name}</button></div>);
+    return (<div className={className}><button onClick={this.handleClick}>{this.props.name}</button></div>);
   }
 }
 
